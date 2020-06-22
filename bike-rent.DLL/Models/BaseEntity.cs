@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace bike_rent.DLL.Models
+namespace BikeRent.DAL.Models
 {
     public class BaseEntity
     {

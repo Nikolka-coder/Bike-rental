@@ -5,4 +5,8 @@
     <RootNamespace>bike_rent.BAL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\bike-rent.DLL\BikeRent.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

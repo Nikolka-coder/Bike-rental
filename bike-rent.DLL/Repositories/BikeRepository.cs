@@ -1,12 +1,12 @@
-﻿using bike_rent.DLL.Models;
-using bike_rent.DLL.Repositories.Interfaces;
+﻿using BikeRent.DAL.Models;
+using BikeRent.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bike_rent.DLL.Repositories
+namespace BikeRent.DAL.Repositories
 {
     public class BikeRepository : GenericRepository<Bike>, IBikeRepository
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace bike_rent.DLL.Enums
+namespace BikeRent.DAL.Enums
 {
     public enum TypeEnum 
     { 

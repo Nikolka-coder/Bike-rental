@@ -1,10 +1,10 @@
-﻿using bike_rent.DLL.Enums;
+﻿using BikeRent.DAL.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace bike_rent.DLL.Models
+namespace BikeRent.DAL.Models
 {
      public class Bike:BaseEntity
     {

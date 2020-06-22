@@ -1,12 +1,12 @@
-﻿using bike_rent.DLL.Enums;
-using bike_rent.DLL.Models;
+﻿using BikeRent.DAL.Enums;
+using BikeRent.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bike_rent.DLL.Extensions
+namespace BikeRent.DAL.Extensions
 {
     public class DbInitializer
     {
