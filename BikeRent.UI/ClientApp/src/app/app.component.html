@@ -1,6 +1,62 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</body>
+<h1>Awesome Bike Rental</h1>
+<input type="button" value="Add" class="btn btn-default" (click)="add()" />
+<table *ngIf="tableMode; else create" class="table table-striped">
+    <thead>
+        <tr>
+            <td>Bike name</td>
+            <td>Bike type</td>
+            <td>Rent price</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of bikes">
+            <ng-template [ngIf]="bike?.id != p.id" [ngIfElse]="edit">
+                <td>{{p?.name}}</td>
+                <td>{{p?.type}}</td>
+                <td>{{p?.price}}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="editProduct(p)">Edit</button>
+                    <button class="btn btn-sm btn-danger" (click)="delete(p)">Delete</button>
+                </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
+ 
+<!--шаблон для редактирования-->
+<ng-template #edit>
+    <td>
+        <input type="text" [(ngModel)]="bike.name" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="bike.type" class="form-control" />
+    </td>
+    <td>
+        <input type="number" [(ngModel)]="bike.price" class="form-control" />
+    </td>
+    <td>
+        <input type="button" value="Save" (click)="save()" class="btn btn-sm btn-success" />
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
+    </td>
+</ng-template>
+ 
+<!--шаблон для добавления-->
+<ng-template #create>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="bike.name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Type</label>
+        <input type="text" [(ngModel)]="bike.type" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="bike.price" class="form-control" />
+    </div>
+    <div>
+        <input type="button" value="Save" (click)="save()" class="btn btn-success" />
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-warning" />
+    </div>
+</ng-template>
